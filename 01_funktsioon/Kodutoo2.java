@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
 public class Kodutoo2 {
+
     public static void main(String[] args) {
         int lugeja = 0;
 
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Sisesta oma arv.");
         int input = scanner.nextInt();
 
         vastus(input, lugeja);

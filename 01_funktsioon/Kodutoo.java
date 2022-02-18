@@ -10,8 +10,6 @@ public class Kodutoo {
 
 
 
-
-
         while(playing){
             System.out.println("Kas järgmine number on suurem või väiksem kui " + vastus + "? S = suurem, V = väiksem.");
             Scanner scanner = new Scanner(System.in);
@@ -55,4 +53,5 @@ public class Kodutoo {
         return ajutine;
 
     }
+
 }
