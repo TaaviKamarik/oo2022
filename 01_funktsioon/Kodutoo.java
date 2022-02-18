@@ -52,7 +52,7 @@ public class Kodutoo {
         while (ajutine == vastus){
             ajutine = (int)(Math.random() * 10);
         }
-        return (int)ajutine;
+        return ajutine;
 
     }
 }

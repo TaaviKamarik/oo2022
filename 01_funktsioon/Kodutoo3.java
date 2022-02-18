@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Kodutoo3 {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Sisesta laenusumma");
@@ -14,11 +15,18 @@ public class Kodutoo3 {
 
         double kuineMakse = summa / kuid;
 
+
+
+        System.out.println("Kokku kuulub tagasimaksmisele " +  arvutus(intressKokku, vahesumma, intress, kuineMakse, kuid, summa));
+    }
+
+
+    public static int arvutus(double intressKokku, double vahesumma, int intress, double kuineMakse, int kuid, int summa){
         for (int i = 0; i < kuid; i++) {
             intressKokku = intressKokku + vahesumma * intress /100;
             vahesumma = vahesumma - kuineMakse;
         }
 
-        System.out.println("Kokku kuulub tagasimaksmisele " + (int)(summa + intressKokku));
+        return (int)(intressKokku + summa);
     }
 }
