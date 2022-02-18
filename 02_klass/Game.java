@@ -25,10 +25,14 @@ public class Game{
         Player mangija2 = new Player(worldHeight, worldWidth);
 
 
-        int enemyCoordinateY = generateRandomCoordinate(worldHeight);
-        int enemyCoordinateX = generateRandomCoordinate(worldWidth);
+        //uue instansi loomaine --- Uus mälukoht.
+        //Kõik klassis defineeritud omadused.
+        Enemy vaenlane1 = new Enemy(worldHeight, worldWidth);
 
-        printMap(worldHeight, worldWidth, mangija1.playerCoordinateY, mangija1.playerCoordinateX, enemyCoordinateY, enemyCoordinateX);
+
+
+
+        printMap(worldHeight, worldWidth, mangija1.playerCoordinateY, mangija1.playerCoordinateX, vaenlane1.enemyCoordinateY, vaenlane1.enemyCoordinateX);
 
         //klasside tegemine tund nr 2
         //Import Alt+enter
@@ -40,7 +44,7 @@ public class Game{
 
             mangija1.movePlayer(input,worldHeight,worldWidth);
 
-            printMap(worldHeight, worldWidth, mangija1.playerCoordinateY, mangija1.playerCoordinateX, enemyCoordinateY, enemyCoordinateX);
+            printMap(worldHeight, worldWidth, mangija1.playerCoordinateY, mangija1.playerCoordinateX, vaenlane1.enemyCoordinateY, vaenlane1.enemyCoordinateX);
             input = scanner.nextLine();
         }
     }//Main end
