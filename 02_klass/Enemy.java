@@ -1,11 +1,11 @@
 public class Enemy {
 
-    int enemyCoordinateY;
-    int enemyCoordinateX;
+    int coordinateY;
+    int coordinateX;
 
     public Enemy(int worldHeight, int worldWidth){
-        this.enemyCoordinateY = generateRandomCoordinate(worldHeight);
-        this.enemyCoordinateX = generateRandomCoordinate(worldWidth);
+        this.coordinateY = generateRandomCoordinate(worldHeight);
+        this.coordinateX = generateRandomCoordinate(worldWidth);
     }
 
     public int generateRandomCoordinate(int worldSize){
