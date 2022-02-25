@@ -5,13 +5,16 @@ public class Main {
         System.out.println(one);
         one.sayHello();*/
 
-        KodutooKlass tegelane = new KodutooKlass("Must", 100, 50);
-        KodutooKlass tegelane2 = new KodutooKlass("valge", 200, 100);
+        KodutooKlass tegelane = new KodutooKlass("Must", 100);
+        KodutooKlass tegelane2 = new KodutooKlass("valge", 200);
 
         System.out.println(tegelane);
+        System.out.println(tegelane2);
         tegelane.vahendaElusid(50);
         tegelane.vahendaElusid(20);
+        tegelane2.vahendaElusid(10);
         System.out.println(tegelane);
+        System.out.println(tegelane2);
     }
 
     // main meetod 1 klass

@@ -2,12 +2,11 @@ public class KodutooKlass {
 
     String nimi;
     int elud;
-    int kiirus;
 
-    public KodutooKlass(String nimi, int elud, int kiirus) {
+    public KodutooKlass(String nimi, int elud) {
         this.nimi = nimi;
         this.elud = elud;
-        this.kiirus = kiirus;
+
     }
 
     public void vahendaElusid(int number){
@@ -18,8 +17,7 @@ public class KodutooKlass {
     @Override
     public String toString() {
         return "Tegelase nimi on " + nimi + " | " +
-                "Elusid on " + elud + " | " +
-                "Kiirus on " + kiirus
+                "Elusid on " + elud
                 ;
     }
 }
