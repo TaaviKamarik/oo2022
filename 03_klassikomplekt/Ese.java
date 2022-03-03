@@ -9,6 +9,6 @@ public class Ese {
     }
 
     public void dealDamage(){
-        System.out.println("Rünnaku tugevus on " + this.power);
+        System.out.println(name + " rünnaku tugevus on " + this.power);
     }
 }

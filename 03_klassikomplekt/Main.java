@@ -5,10 +5,17 @@ public class Main {
 
         Ese relv = new Ese("Mõõk", 20);
         Mangija mangija = new Mangija("Kalev", 100, relv);
-        Mangija mangija2 = new Mangija("Sulev", 200, new Ese("Kirves", 50));
 
+        Mangija mangija2 = new Mangija("Munev", 500, new Ese("Nuga", 200), relv);
+
+        mangija.playerWeapon();
         mangija.relv.dealDamage();
+
+        System.out.println();
+
+        mangija2.playerWeapon();
         mangija2.relv.dealDamage();
+        mangija2.relv2.dealDamage();
     }
 
 }
