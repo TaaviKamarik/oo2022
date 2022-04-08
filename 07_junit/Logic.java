@@ -48,13 +48,13 @@ public class Logic {
             System.out.println("Sisesta toidu nimi");
             name = scanner.nextLine();
         }
-        System.out.println("Sisesta rasvad");
+        System.out.println("Sisesta rasvad (100g kohta)");
         double fat = scanner.nextDouble();
         scanner.nextLine();
-        System.out.println("Sisesta valgud");
+        System.out.println("Sisesta valgud (100g kohta)");
         double protein = scanner.nextDouble();
         scanner.nextLine();
-        System.out.println("Sisesta süsivesikud");
+        System.out.println("Sisesta süsivesikud (100g kohta)");
         double carbs = scanner. nextDouble();
         scanner.nextLine();
         food = new Food(name,fat,carbs,protein);
@@ -66,8 +66,13 @@ public class Logic {
         }
         System.out.println("Kas soovite toitu lisada kalorilugejasse? (Y/N)");
         vastus = scanner.nextLine();
+        System.out.println("Kui suures koguses? (g)");
+        double kogus = scanner.nextInt();
+        scanner.nextLine();
+        kogus = kogus/100;
+
         if (vastus.toUpperCase().equals("Y")){
-            person.addFoodCalories(food);
+            person.addFoodCalories(food, kogus);
             System.out.println("Päevane kalorite tarbimine on " + person.getCurCalories() + "/"+person.getMaxCalories());
         }
 
@@ -83,11 +88,14 @@ public class Logic {
         if(foodContainer.checkFood(name)){
             food = foodContainer.findFood(name);
             System.out.println(food);
-            System.out.println("Kas soovite toitu lisada kalorilugejasse?");
             System.out.println("Kas soovite toitu lisada kalorilugejasse? (Y/N)");
             String vastus = scanner.nextLine();
-            if (vastus.toUpperCase() == "Y"){
-                person.addFoodCalories(food);
+            if (vastus.toUpperCase().equals("Y")){
+                System.out.println("Kui suures koguses? (g)");
+                double kogus = scanner.nextInt();
+                scanner.nextLine();
+                kogus = kogus/100;
+                person.addFoodCalories(food, kogus);
                 System.out.println("Päevane kalorite tarbimine on " + person.getCurCalories() + "/"+person.getMaxCalories());
             }
         }else{

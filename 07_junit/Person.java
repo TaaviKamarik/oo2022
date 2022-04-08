@@ -45,8 +45,9 @@ public class Person {
         this.curCalories = 0;
     }
 
-    public void addFoodCalories(Food food){
-        this.curCalories += food.totCalories;
+    public void addFoodCalories(Food food, double kogus){
+
+        this.curCalories += food.totCalories * kogus;
     }
 
     @Override

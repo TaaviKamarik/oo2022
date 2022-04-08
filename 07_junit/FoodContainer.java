@@ -46,12 +46,13 @@ public class FoodContainer {
     public boolean checkFood(String string){
         boolean value = false;
         if(foodName.size() > 0){
-            for (String food : foodName) {
-                if (food == string){
+            for (int i = 0; i < foodName.size(); i++) {
+                if (foodName.get(i).equals(string)){
                     value = true;
-                }
+            }
             }
         }
+        System.out.println(value);
 
         return value;
     }

@@ -18,7 +18,8 @@ public class Testid {
     @Test
     public void kontrolli_kas_kalorid_lisatakse_kasutajale_oigesti(){
         Food food = new Food("piim",1,1,1);
-        person.addFoodCalories(food);
+        double kogus = 1;
+        person.addFoodCalories(food, kogus);
         assertEquals(17, person.getCurCalories());
     }
 
